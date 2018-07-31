@@ -1,0 +1,38 @@
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.card-container {
+  perspective: 700;
+}
+
+.card {
+  $card-dimensions: 200px;
+  position: relative;
+  width: $card-dimensions;
+  height: $card-dimensions;
+  transform-style: preserve-3d;
+  color: #fff;
+  h1 {
+    margin: 0;
+    text-align: center;
+    line-height: $card-dimensions;
+  }
+  .card-front,
+  .card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+  }
+  .card-back {
+    background: green;
+    transform: rotateY(180deg);
+  }
+  .card-front {
+    background: blue;
+  }
+}
